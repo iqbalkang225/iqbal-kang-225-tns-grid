@@ -1,0 +1,115 @@
+.world{
+
+  &__title{
+    margin-bottom: 2rem;
+  }
+
+  &-left{
+    padding-bottom: 2rem;
+
+    @include respond($tablet){
+      grid-column: center-start / col-end 5;
+
+      border-right: 1px solid $color-border;
+      padding-right: 2rem;
+      margin-right: 1rem;
+
+      & div:last-child{
+        border-bottom: none;
+      }
+    }
+
+    @include respond($desktop){
+      grid-column: center-start / col-end 3;
+    }
+
+    &__box{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-bottom: 1px solid $color-border;
+      padding: 1rem 0;
+    }
+
+    &__box:first-child{
+      padding-top:0;
+    }
+
+    &__author{
+      font-size: 2.2rem;
+    }
+  }
+
+  &-middle{
+    grid-row: 8 / 9;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $color-border;
+
+    @include respond($desktop){
+      grid-column: col-start 4 / col-end 7;
+      grid-row: 7 / 8;
+
+      padding: 0 2rem 0 1rem;
+      border-bottom: none;
+    }
+  }
+
+  &-middle{
+    text-align: center;
+
+    h2{
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__author{
+    margin-top: .8rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+
+  &-right{
+    // border-bottom: 1px solid $color-border;
+    padding-bottom: 2rem;
+
+    @include respond($tablet){
+      grid-column: col-start 6 / center-end;
+
+      padding-left: 1rem;
+      
+      & div:last-child{
+        border-bottom: none;
+      }
+    }
+
+    @include respond($desktop){
+      grid-column: col-start 8 / center-end;
+
+      border-left: 1px solid $color-border;
+      padding: 0 2rem;
+
+    }
+
+    & div:nth-child(1){
+      border-top: none;
+    }
+
+    &__box{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-bottom: 1px solid $color-border;
+      padding: 1rem 0;
+    }
+
+    &__box:first-child{
+      padding-top:0;
+    }
+
+    &__author{
+      font-size: 2.2rem;
+    }
+  }
+}

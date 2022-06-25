@@ -1,0 +1,66 @@
+body{
+  margin-top: 2rem;
+
+  display: grid;
+  grid-template-columns: [start] minmax(1.6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(1.6rem, 1fr) [end];
+  grid-auto-rows: min-content;
+}
+
+.header {
+  grid-column: center-start / center-end;
+}
+
+
+.nav{
+  grid-column: center-start / center-end;
+}
+
+
+.content{
+
+  &__left{
+    grid-column: center-start / center-end;
+    
+    @include respond($desktop) {
+      grid-column: center-start / col-end 5;
+    }
+  }
+
+  &__right{
+    grid-column: center-start / center-end;
+
+    @include respond($desktop) {
+      grid-column: col-start 6 /center-end;
+    }
+  }
+  
+}
+
+.more{
+  grid-column: center-start / center-end;
+}
+
+.writers{
+  grid-column: center-start / center-end; 
+}
+
+.world{
+  grid-column: center-start / center-end; 
+}
+
+.world-left{
+  grid-column: center-start / center-end; 
+}
+
+.world-middle{
+  grid-column: center-start / center-end; 
+}
+
+.world-right{
+  grid-column: center-start / center-end; 
+}
+
+.footer{
+  background-color: #f4f4f4;
+  grid-column: start / end;
+}

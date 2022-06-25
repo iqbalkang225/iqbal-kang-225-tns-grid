@@ -1,0 +1,50 @@
+.nav{
+  font-size: 2rem;
+  padding: 1rem;
+  border-bottom: 2px solid $color-accent-2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__items{
+    display: none;
+    margin-left: auto;
+    padding: 0 2rem;
+
+    @include respond($desktop){
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+    }
+
+    @include respond($navigation){
+      gap: 2rem;
+    }
+  }
+
+  &--hidden{
+    display: none;
+
+    @include respond($tablet){
+      display: block;
+    }
+  }
+
+  @include respond($tablet){
+    justify-content: start;
+
+    &__section::after{
+      content: '|';
+      padding-left: 1rem;
+    }
+
+    &__icon{
+      margin: 1rem;
+    }
+
+    &__user{
+      display: none;
+    }
+  }
+}
